@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        height: 100px;
+        width: 200px;
+        border-width: 1px;
+        border-style: solid;
+        /*  none : 　无边框。与任何指定的border-width值无关 
+            hidden : 　隐藏边框。IE不支持 
+            dotted : 　在MAC平台上IE4+与WINDOWS和UNIX平台上IE5.5+为点线。否则为实线 
+            dashed : 　在MAC平台上IE4+与WINDOWS和UNIX平台上IE5.5+为虚线。否则为实线 
+            solid : 　实线边框 
+            double : 　双线边框。两条单线与其间隔的和等于指定的border-width值 
+            */
+        border-color: red;
+        /* 连写 */
+        /* border : border-width || border-style || border-color  */
+        /* border-top: 1px solid red; */
+        /* border-bottom */
+        /* border-right */
+        /* border-left */
+    }
+    table {
+        border: 1px solid red;
+        border-collapse: collapse; /* 合并单元格边框 */
+        
+    }
+    td{
+        border: 1px solid red;
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+    <table >
+        <tr>
+            <td>123</td>
+            <td>123</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>123</td>
+        </tr>
+
+    </table>
+</body>
+</html>
