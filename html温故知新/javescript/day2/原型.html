@@ -23,6 +23,18 @@
         s.eat()
         console.dir(Student)
 
+
+
+        
+    </script>
+    <script>
+        // 把局部变量变成全局变量
+        (function(win){
+                var num = 10
+                win.num = num
+
+            })(window);
+        console.log(num)
     </script>
 </head>
 <body>
