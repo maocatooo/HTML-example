@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .map{
+            height: 600px;
+            width: 800px;
+            background-color: #CCC;
+            position: relative;
+        }
+        
+    </style>
+    <script>    
+    function aa(a){
+        console.log(arguments)
+        console.log(a)
+    }
+    aa()
+    </script>
+</head>
+<body>
+    <!-- 地图 -->
+    <div class="map">
+
+    </div>
+    
+    <script>
+        (function(){
+            // 创建食物对象
+            var elements =[];
+            // x,y
+            function Food(x,y,width,height,color){
+                this.x = x;
+                this.y = y;
+                this.width = width || 20;
+                this.height = height || 20;
+                this.color=color || "green"
+
+            }
+            Food.prototype.init = function(map){
+                var div = document.createElement("div");
+                map.appendChild(div)
+
+                div.style.width = this.width+"px"
+                div.style.height = this.height+"px"
+                div.style.backgroundColor = this.color
+                // 横纵坐标随机
+                // div 脱离文档流
+                div.style.position = "relative"
+
+                elements.push(div)
+            }
+            window.Food=Food
+        }());
+        var fd = new Food()
+        var map = document.getElementsByClassName("map")
+        fd.init(map)
+        console.log(fd.width)
+
+
+     
+    </script>
+</body>
+</html>
