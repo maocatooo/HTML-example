@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .cls {
+            height: 100px;
+            width: 100px;
+            background-color:green;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn"> edit class </button>
+    <div id="div1">
+        
+    </div>
+    <div id="div2">
+        
+    </div>
+    <script>
+        var div1 = document.getElementById('div1')
+        div1.style.width = '200px';
+        div1.style.height = '200px';
+        // 在js DOM CSS操作中， 凡是类似background-color中有-，去掉-，单词首字母大写
+        div1.style.backgroundColor = 'red';
+        var btn = document.getElementById('btn')
+
+        var div2 = document.getElementById('div2')
+        btn.onclick=function(){
+            div2.className = 'cls';
+        }
+    </script>
+</body>
+</html>

@@ -44,14 +44,80 @@
     <button> no click </button>
     </div>
     <script>
-        var button = document.getElementById('div3').getElementsByTagName('button')
-        for(var i = 0;i<button.length;i++){
-            button[i].onclick = function(){
-                for(var num=0;num<button.length;num++){
-                    button[num].innerText = ' no click '
+            var button = document.getElementById('div3').getElementsByTagName('button')
+            for(var i = 0;i<button.length;i++){
+                button[i].onclick = function(){
+                    for(var num=0;num<button.length;num++){
+                        button[num].innerText = ' no click '
+                    }
+                    this.innerText = ' is click '
                 }
-                this.innerText = ' is click '
             }
+    </script>
+    <div id="div4">
+        <button id="btn2"> change radio </button>
+        <input type="radio" name="a123" id="" />1
+        <input type="radio" name="a123" id="" />2
+        <input type="radio" name="a123" id="" />3
+        <input type="radio" name="a123" id="" />4
+    </div>
+    
+    
+    <script>
+        var div4 = document.getElementById('div4')
+        var btn2 = document.getElementById('btn2')
+        btn2.onclick = function(){
+            var input = div4.getElementsByTagName('input')
+            if(input[3].checked){
+                input[3].checked = false;
+            }
+            else{
+                input[3].checked = true;
+            }
+        }
+    </script>
+    <div id="div5">
+            <button id="btn3"> change checkbox </button>
+            <input type="checkbox" name="a123" id="" />1
+            <input type="checkbox" name="a123" id="" />2
+            <input type="checkbox" name="a123" id="" />3
+            <input type="checkbox" name="a123" id="" />4
+        </div>
+        
+        
+        <script>
+            var div5 = document.getElementById('div5')
+            var btn3 = document.getElementById('btn3')
+            btn3.onclick = function(){
+                var input = div5.getElementsByTagName('input')
+                if(input[3].checked){
+                    input[3].checked = false;
+                }
+                else{
+                    input[3].checked = true;
+                }
+            }
+        </script>
+
+<div id="div6">
+        <button id="btn4"> change checkbox </button>
+
+        <select name="" id="">
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+        </select>
+    </div>
+    
+    
+    <script>
+        var div6 = document.getElementById('div6')
+        var btn4 = document.getElementById('btn4')
+        btn4.onclick = function(){
+            var option = div6.getElementsByTagName('option')
+            option[3].selected = true;
         }
     </script>
 </body>
