@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">edit</button>
+    <div id="div1">
+        <p>123321</p>
+        <p>123321</p>
+        <p>123321</p>
+        <p>123321</p>
+        <p>123321</p>
+    </div>
+    <div id="div2">
+        <p>123321</p>
+        <p>123321</p>
+        <p>123321</p>
+        <p>123321</p>
+        <p>123321</p>
+    </div>
+    <script>
+        var btn = document.getElementById('btn')
+        btn.onclick = function(){
+            var ps = document.getElementById('div1').getElementsByTagName("p")
+            // ps 为数组形式，不管p标签有多少个！
+            console.log(ps.length)
+            for(var i = 0;i<ps.length; i++){
+                ps[i].innerText = "12332112312312312312"
+            }
+        }
+        
+    </script>
+    <div id="div3">
+    <button> no click </button>
+    <button> no click </button>
+    <button> no click </button>
+    <button> no click </button>
+    <button> no click </button>
+    <button> no click </button>
+    <button> no click </button>
+    </div>
+    <script>
+        var button = document.getElementById('div3').getElementsByTagName('button')
+        for(var i = 0;i<button.length;i++){
+            button[i].onclick = function(){
+                for(var num=0;num<button.length;num++){
+                    button[num].innerText = ' no click '
+                }
+                this.innerText = ' is click '
+            }
+        }
+    </script>
+</body>
+</html>
