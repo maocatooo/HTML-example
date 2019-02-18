@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 阻止超链接跳转 -->
+    <a href="http://www.baidu.com" onclick="return false;">111</a>
+    <div>
+        <a href="../static/image/2013062320262198.jpg" id="aa"><img src="../static/image/2013062320262198.jpg" width="30"></a>
+        <img id="img1" >
+    </div>
+    <script src="../static/js/common.js"></script>
+    <script>
+        my$('aa').onclick = function(){
+            my$('img1').src = this.href;
+            return false;
+        }
+    </script>
+</body>
+</html>
