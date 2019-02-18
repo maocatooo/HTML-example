@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        // 文档：一个页面就是一个文档
+        // 元素（element）：页面中的所有标签都是元素，元素可以看成是对象，
+        // 节点（node）：页面中所有的内容都是节点：标签，属性，文本
+        // 根（root）
+
+    </script>
+    
+</head>
+<body>
+    <input type="button" id="btn" value="btn">
+    <input type="button" id="btn1" value="btn1">
+    <input type="button" id="btn2" value="btn2">
+    <img src="" id="img1">
+    <p id="p1">123321</p>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick= function(){
+            alert("123")
+        }
+        var btn1 = document.getElementById("btn1");
+        var img1 = document.getElementById('img1')
+        btn1.onclick= function(){
+            
+            img1.src = "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2171265139,783567202&fm=58"
+            console.dir(img1)
+        }
+        var btn2 = document.getElementById("btn2")
+        var p1 = document.getElementById('p1')
+        btn2.onclick=function(){
+            // innerText 原样输出替换内容
+            // innerHTML html标签会被转义 
+            // p1.innerText="<p>fasdfasd</p>"
+            p1.innerHTML="<a href='#'>fasdfasd</a>"
+        }
+    </script>
+</body>
+</html>
