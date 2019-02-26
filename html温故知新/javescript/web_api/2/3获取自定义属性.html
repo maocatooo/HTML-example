@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p text='111'>123</p>
+    <script src="../static/js/common.js"></script>
+    <script>
+        var pText = document.getElementsByTagName('p')[0]
+        alert(pText.getAttribute('text'))
+        // 设置属性
+        pText.setAttribute('asd', 312)
+        // 移除自定义属性
+        // 非自定义的只移除值
+        pText.removeAttribute('asd')
+    </script>
+</body>
+</html>
