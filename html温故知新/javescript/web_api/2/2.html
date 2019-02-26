@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div1, .div2 {
+            width: 100px;
+            height: 100px;
+            background-color:red;
+
+        }
+        .div2 {
+            background-color:black;
+        }
+        .hide {
+            display: none
+        }
+    </style>
+</head>
+<body>
+
+    <div class="div1"></div>
+    <div class="div2">
+        <img src="../static/image/2019-02-26 09-55-51屏幕截图.png" alt="">
+    </div>
+    <script src="../static/js/common.js"></script>
+    <script>
+        var div1 = myc$('div1')
+        var div2 = myc$('div2')
+        // 鼠标移入
+        div1[0].onmouseover = function(){
+            div2[0].className='div2 hide'
+        }
+        // 鼠标移出
+        div1[0].onmouseout = function(){
+            div2[0].className='div2'
+        }
+    </script>
+</body>
+</html>
