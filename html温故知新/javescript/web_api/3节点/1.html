@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul id="ul1">
+            <li>
+                123
+            </li>
+            <li>
+                123
+            </li>
+            <li>
+                123
+            </li>
+        </ul>
+    </div>
+    <script>
+    var ul1 = document.getElementById('ul1');
+    // parentElement 和 parentNode一样,但parentNode是W3C标准的parentElement 只在IE中可用. 
+    console.log(ul1.parentNode.nodeName)
+    </script>
+</body>
+</html>
