@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p>123321</p>
+        <ul id="ul1">哦哦
+            <li>
+                123
+            </li>
+            <li id="li1">
+                333
+            </li>
+            <li>
+                222
+            </li>嗯嗯
+        </ul>
+    </div>
+    <script>
+        var div1 = document.getElementById('div1')
+    
+        var ul1 = document.getElementById('ul1')
+        //第一个子节点 lastChild 最后一个
+        console.log(ul1.firstChild)
+        // 第一个子元素 lastElementChild 最后一个
+        console.log(ul1.firstElementChild)
+
+        var li1 = document.getElementById('li1')
+        // 当前节点的上一个兄弟节点 nextSibling 下一个
+        console.log(li1.previousSibling)
+        // 当前节点的上一个兄弟元素 nextElementSibling下一个
+        console.log(li1.previousElementSibling)
+
+    </script>
+</body>
+</html>
