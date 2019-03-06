@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead id="thd">
+            <tr>
+                <th><input type="checkbox"/></th>
+                <th>123321</th>
+                <th>3333</th>
+            </tr>
+        </thead>
+        <tbody id="tbd">
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>123321</td>
+                <td>3333</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>123321</td>
+                <td>3333</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>123321</td>
+                <td>3333</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>123321</td>
+                <td>3333</td>
+            </tr>
+        </tbody>
+    </table>
+
+<script>
+    var thd = document.getElementById('thd').getElementsByTagName('input')[0];
+
+    var tbdInput = document.getElementById('tbd').getElementsByTagName('input');
+
+    thd.onclick = function(){
+        for(var i=0;i<tbdInput.length;i++){
+            tbdInput[i].checked = this.checked;
+        }
+    }
+    for(var i=0;i<tbdInput.length;i++){
+            // 为tbd的input设置绑定事件。
+            tbdInput[i].onclick = function(){
+                var status = true 
+                for(var i=0;i<tbdInput.length;i++){
+                    if(!tbdInput[i].checked){
+                    status=false
+                    break
+                    }
+                }
+                thd.checked=status
+                
+            }
+        }
+</script>
+</body>
+</html>

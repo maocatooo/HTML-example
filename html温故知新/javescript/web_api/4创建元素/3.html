@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p>这是一个p</p>
+    </div>
+    <script>
+        var i = 1
+        function appendEle(){
+            var div1 = document.getElementById('div1')
+            var p1 = document.createElement('p')
+
+            p1.innerText = '这是一个p'+i
+            i++
+            // div1.appendChild(p1) //追加一个元素
+            // div1.insertBefore(p1, div1.firstElementChild) // 插入元素到div1的第一个子元素前面
+            // div1.replaceChild(p1, div1.firstElementChild) // 替换掉一个元素
+            div1.removeChild(div1.firstElementChild) // 删除一个元素
+            //
+        }
+        appendEle()
+    </script>
+</body>
+</html>

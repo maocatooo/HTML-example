@@ -27,7 +27,20 @@
         <img src="../static/image/2019-02-26 09-55-51屏幕截图.png" alt="">
     </div>
     <script src="../static/js/common.js"></script>
+    <button id="btn">按钮</button>
     <script>
+
+        //为按钮注册多个点击事件
+        var btn = my$('btn')
+        btn.addEventListener('click',function(){
+            console.log(123123)
+        },false)
+        btn.addEventListener('click',function(){
+            console.log(3333)
+        },false)
+
+
+
         var div1 = myc$('div1')
         var div2 = myc$('div2')
         // 鼠标移入
