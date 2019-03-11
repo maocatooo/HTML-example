@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="btn" type="button" value="按钮">
+
+    <input id="btn1" type="button" value="按钮">
+
+    <script>
+        var btn = document.getElementById('btn');
+        var btn1 = document.getElementById('btn1');
+        function f1(){
+            console.log("123321")
+        }
+        
+        function f2(){
+            console.log("122222")
+        }
+        // 事件阶段：
+        //   1.捕获阶段
+        //   2.目标阶段
+        //   3.冒泡阶段
+        // addEventListener('', '', Boolean)
+        btn.addEventListener("click", f1, false)
+        btn.addEventListener("click", f2, false)
+        btn1.onclick = function(){
+            //1. 移除btn click事件的f1 
+            btn.removeEventListener("click",f1)
+        }
+        // 2.  btn1.onclick = null;
+    </script>
+</body>
+</html>

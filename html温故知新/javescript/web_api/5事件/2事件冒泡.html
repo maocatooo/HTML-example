@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: #999911;
+        }
+        #div2 {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+        #div3 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3"></div>
+        </div>
+    </div>
+    <script>
+          var div1 = document.getElementById('div1')
+          var div2 = document.getElementById('div2')
+          var div3 = document.getElementById('div3')
+          div1.onclick = function(event){
+              // event 事件处理参数对象。
+              console.log(this.id)
+            //   window.event.cancelBubble = true; 火狐不支持
+            // event.stopPropagation();
+            
+
+          }
+          div2.onclick = function(event){
+              // event 事件处理参数对象。
+              console.log(this.id)
+            //   window.event.cancelBubble = true;
+            event.stopPropagation();
+
+          }
+          div3.onclick = function(event){
+              console.log(this.id)
+            //   window.event.cancelBubble = true;
+            event.stopPropagation();
+          }
+    </script>
+</body>
+</html>

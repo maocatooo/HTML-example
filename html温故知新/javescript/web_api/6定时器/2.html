@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1 {
+            margin-top: 40px;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            background-color: rgb(245, 55, 55);
+        }
+    </style>
+</head>
+
+<body>
+    <button id="b400">400</button> <button id="b800">800</button>
+    <div id="div1"></div>
+    <script>
+        var b400 =document.getElementById('b400')
+        var b800 =document.getElementById('b800')
+        var div1 =document.getElementById('div1')
+        b800.onclick = function(){
+            f1(div1,800)
+            
+        }
+        b400.onclick = function(){
+            f1(div1,400)
+            
+        }
+        function f1 (Element, target){
+            clearInterval(Element.indexID)
+            Element.indexID = setInterval(function(){
+            var current = div1.offsetLeft;
+            console.log(current)
+            current += target>current?10:-10
+            if (Math.abs(current-target)<10){
+                clearInterval(Element.indexID)
+                div1.style.left = target +"px"
+                return
+            }
+            div1.style.left = current +"px"
+            
+            // div1.style.top = current +"px" 
+            },20)
+        }
+    </script>
+</body>
+</html>
