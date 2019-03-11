@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #div1{
+            width: 100px;
+            height: 100px;
+            margin: 1px; 
+            padding: 1px;
+            background-color: red;
+            border: 1px solid red
+        }
+        #img1{
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100px;height: 100px;">
+
+    </div>
+    <img id="img1" src="../static/image/2013062320262198.jpg" alt="" width="100">
+    <div id="div1">
+
+
+    </div>
+    <script>
+        // offset系列
+        console.log(document.getElementById('div1').offsetHeight)
+        // 2*border+2*padding+width = offsetWidth
+        console.log(document.getElementById('div1').offsetWidth)
+        console.log(document.getElementById('div1').offsetTop)
+        // margin+顶端距离
+        console.log(document.getElementById('div1').offsetLeft)
+        console.log(document.body) //获取的是标签
+        console.log(document.title) //获取的是title标签里的值
+
+        console.log(document.documentElement) //获取的是title标签里的值
+        document.onmousemove = function(event){
+            console.log(event.clientY)
+            console.log(event.clientX)
+            document.getElementById('img1').style.left = event.clientX+ 'px'
+            document.getElementById('img1').style.top = event.clientY+ 'px'
+        }
+    </script>
+</body>
+</html>

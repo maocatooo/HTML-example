@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+     #div1{
+        width: 100px;
+        height: 1000px;
+        margin: 1px; 
+        padding: 1px;
+        background-color: red;
+        border: 1px solid red;
+        overflow: auto
+        
+    }
+</style>
+</head>
+<body><input type="button" id="btn" value="btn">
+    <div id="div1">
+        阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的阿萨德按时阿斯蒂芬是的是的
+    </div>
+    <script>
+        document.getElementById("btn").onclick = function(){
+
+            console.log(document.getElementById('div1').scrollHeight)
+            // margin+顶端距离
+            console.log(document.getElementById('div1').scrollWidth)
+            console.log(document.getElementById('div1').scrollTop)
+    
+        }
+        // 滚动条滚动事件
+        document.getElementById("div1").onscroll = function(){
+            console.log(123)
+        }
+        window.onscroll =function(){
+            console.log(12333)
+        }
+    </script>
+</body>
+</html>

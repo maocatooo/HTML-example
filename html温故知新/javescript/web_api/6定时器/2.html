@@ -36,12 +36,13 @@
             Element.indexID = setInterval(function(){
             var current = div1.offsetLeft;
             console.log(current)
-            current += target>current?10:-10
-            if (Math.abs(current-target)<10){
+            
+            if (Math.abs(current-target) < 10){
                 clearInterval(Element.indexID)
                 div1.style.left = target +"px"
                 return
             }
+            current += target>current?10:-10
             div1.style.left = current +"px"
             
             // div1.style.top = current +"px" 
