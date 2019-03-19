@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- get 请求 -->
+    <h5>get</h5>
+    <form action="">
+        <input name="name" type="text">
+        <input name="age" type="text">
+        <input value="tijiao" type="submit">
+
+    </form>
+    <h5>post</h5>
+    <form action="" method="POST">
+            <input name="name" type="text">
+            <input name="age" type="text">
+            <input value="tijiao" type="submit">
+    
+        </form>
+    {{each users}}
+    <h1>im {{$value.user.name}},age {{ $value.user.age }}</h1>
+    {{/each}}
+</body>
+</html>

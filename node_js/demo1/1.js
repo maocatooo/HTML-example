@@ -31,13 +31,10 @@ http.
         }else{
           var query = parseObj.query
           // 路径get请求
-          if (query) {
-            console.log(query)
+          if (JSON.stringify(query) !== "{}") {
+            
             dict.push({name:query.text?query.text:""})
-            console.log(dict)
-            response.statusCode = 302
-            response.setHeader('Location','http://www.baidu.com' || '/') // 提交重定向到百度 || "/"
-            response.end()
+            
           }
           var htmlstr = template.render(data.toString(),{
             dict: dict
