@@ -32,9 +32,12 @@ http.
           var query = parseObj.query
           // 路径get请求
           if (JSON.stringify(query) !== "{}") {
-            
+            console.log(query)
             dict.push({name:query.text?query.text:""})
-            
+            console.log(dict)
+            response.statusCode = 302
+            response.setHeader('Location','' || '/') // 提交重定向到百度 || "/"
+            response.end()
           }
           var htmlstr = template.render(data.toString(),{
             dict: dict

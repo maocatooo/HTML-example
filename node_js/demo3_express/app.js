@@ -13,8 +13,16 @@ app1.use('/static/',experss.static('./static'))
 // 使用body 可以获取表单提交的内容
 app1.use(body.urlencoded({ extended:false }))
 
-function readFile(){
-        return JSON.parse( fs.readFileSync('./data/db.json'))
+function readFile(callback){
+    fs.readFile('./data/db.json',function(error,data){
+        if(error){
+            callback(error)
+        }
+        else{
+            callback()
+        }
+    })
+        return JSON.parse(fs.readFileSync())
 }
 function saveFile(data){
     fs.writeFile('./data/db.json',JSON.stringify(data),function(error){
