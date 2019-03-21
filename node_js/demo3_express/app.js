@@ -1,10 +1,10 @@
-var experss = require('express')
+var express = require('express')
 
 var body = require('body-parser')
 var fs = require('fs')
 var r = require('./index')
 // console.log(r)
-var app1 = experss()
+var app1 = express()
 
 // 静态文件，开放目录
 app1.use('/static/', experss.static('./static'))
