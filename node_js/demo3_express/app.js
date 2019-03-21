@@ -2,15 +2,11 @@ var experss = require('express')
 
 var body = require('body-parser')
 var fs = require('fs')
-// var r = require('./index')
+var r = require('./index')
 // console.log(r)
 var app1 = experss()
 
 // 静态文件，开放目录
-function print(p) {
-    console.log(p)
-}
-
 app1.use('/static/', experss.static('./static'))
 // 使用body 可以获取表单提交的内容
 app1.use(body.urlencoded({extended: false}))
@@ -106,7 +102,7 @@ app1.post('/post', function (request, response) {
     }
     // response.send("hello world")
 })
-// app1.use(r)
+app1.use(r)
 app1.listen(3000, function () {
     console.log('running')
 })
