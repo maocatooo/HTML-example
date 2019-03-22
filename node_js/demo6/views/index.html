@@ -1,0 +1,10 @@
+{{extend './layout.html'}}
+{{block 'head'}}
+    <title>1234</title>
+{{/block}}
+{{block "base"}}
+<a href="/add">添加</a>
+{{each users}}
+<p>{{$index + 1}}--{{$value.username}} -- {{$value.password}} ---  {{$value.email}}-- {{$value.tag}} -- <a href="/edit?id={{$value._id}}">修改</a></p>
+{{/each}}
+{{/block}}

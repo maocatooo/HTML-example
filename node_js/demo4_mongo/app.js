@@ -3,7 +3,7 @@ var url = "mongodb://mongo:27017/";
 
 mongo.connect(url, { useNewUrlParser: true }, function(err, db) {
     if (err) throw err;
-    var dbo = db.db("runoob");
+    var dbo = db.db("testNode");
     var myobj = { name: "123", url: "www.bss" };
     dbo.collection("site").insertOne(myobj, function(err, res) {
         if (err) throw err;
