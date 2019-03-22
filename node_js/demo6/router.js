@@ -17,11 +17,13 @@ router.get('/index', function (req, res) {
 })
 
 router.get('/', function (req, res) {
+    req.session.name = '123!!!'
     res.redirect('/index')
 })
 
 
 router.get('/edit', function (req, res) {
+    console.log(req.session.name)
     res.send("edit")
 })
 /*
