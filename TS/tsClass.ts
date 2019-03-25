@@ -27,4 +27,5 @@ user.run()
 * public 公有 谁都行 默认
 * protected 本类，子类可以用
 * prvate 私有 本类使用
+* static 静态属性，方法 关键字
 * */
