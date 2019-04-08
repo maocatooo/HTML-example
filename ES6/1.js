@@ -1,3 +1,4 @@
+var {log} = console
 // let a = 1
 // {
 //     let b = 2
@@ -64,3 +65,44 @@
 // x // "a"
 // y // undefined
 // z // []
+//对象的解构赋值
+// var {x = 3} = {};
+// x // 3
+//
+// var {x, y = 5} = {x: 1};
+// x // 1
+// y // 5
+//
+// var {x: y = 3} = {};
+// y // 3
+//
+// var {x: y = 3} = {x: 5};
+// y // 5
+
+// var { message: msg = 'Something went wrong' } = {};
+// let { baz:a } = {baz:1}
+// log(a)
+// log(msg )// "Something went wrong"
+// const node = {
+//     loc: {
+//         start: {
+//             line: 1,
+//             column: 5
+//         }
+//     }
+// };
+
+//let { loc, loc: { start }, loc: { start: { line }} } = node;
+// let { loc:loc, loc: { start:start }, loc: { start: { line:line }} } = node;
+// 三次解构赋值
+
+// log(line)
+// log(loc)
+// log(start)
+// line // 1
+// loc  // Object {start: Object}
+// start // Object {line: 1, column: 5}
+
+// let x
+// ({x:x=3}={x:33})
+// log(x)
