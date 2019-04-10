@@ -1,5 +1,6 @@
 function runAsync(data){
-    var p = new Promise(function(resolve, reject){
+    var p = new Promise(
+        function(resolve, reject){
         //做一些异步操作
         setTimeout(function(){
             resolve(data);

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="example-1"></div>
+<script type="text/javascript" src="pym.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script>
+    const promise = new Promise(function(resolve, reject) {
+        // ... some code
+
+        if (new pym.Parent('example-1', 'pym-f1.html', {})){
+            resolve('ok');
+        } else {
+            reject('');
+        }
+    });
+    // var pymParent = new pym.Parent('example-1', 'pym-f1.html', {});
+    promise.then(function (data) {
+        console.log(data)
+        $('#example-1').children('iframe').attr('id','example')
+        $("#example")[0].contentWindow.document.getElementById('a').onclick=function () {
+            console.log('fuzi ')
+        }
+    })
+
+    // console.log($('#example-1').children('iframe').attr('id'))
+    // var second = new pym.Parent('example-2', 'http://0.0.0.0:5200/inhoo/admin/exam/edit/5caafdad1e2926181228bf37', {});
+    function f() {
+        console.log(123)
+    }
+    // console.log($("#example").contents())
+    // // document.getElementById('example').$('#a').click(function () {
+    // //     console.log(123)
+    // // })
+    // setTimeout(function () {
+    //
+    // },3000)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("div").toggle(500, function () {
+                    console.log(1)
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<button type="button">切换</button>
+<div style="display: none">这是一个段落。
+    这是另一个段落。</div>
+<button type="button">切换</button>
+<div style="display: none">这是一个段落。
+    这是另一个段落。</div>
+<button type="button">切换</button>
+<div style="display: none">这是一个段落。
+    这是另一个段落。</div>
+</body>
+</html>
