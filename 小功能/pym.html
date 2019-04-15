@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./layer/theme/default/layer.css">
     <title>Title</title>
 </head>
 <body>
@@ -9,24 +10,52 @@
 <div id="example-1"></div>
 <script type="text/javascript" src="pym.js"></script>
 <script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="./layer/layer.js"></script>
 <script>
-    const promise = new Promise(function(resolve, reject) {
-        // ... some code
+    // new pym.Parent('example-1', 'pym-f1.html', {})
+    // const promise = new Promise(function(resolve, reject) {
+    //     ... some code
+        //
+        // if (){
+        //     resolve('ok');
+        // } else {
+        //     reject('');
+        // }
+    // });
 
-        if (new pym.Parent('example-1', 'pym-f1.html', {})){
-            resolve('ok');
-        } else {
-            reject('');
+    function layer_open(event, this_A) {
+        if (event){
+            event.preventDefault();
         }
-    });
-    // var pymParent = new pym.Parent('example-1', 'pym-f1.html', {});
-    promise.then(function (data) {
-        console.log(data)
-        $('#example-1').children('iframe').attr('id','example')
-        $("#example")[0].contentWindow.document.getElementById('a').onclick=function () {
-            console.log('fuzi ')
-        }
-    })
+        // let url = $(this_A).attr('href') || $(this_A).attr('url');
+        layer.open(
+            {
+                type: 2,
+                // title: 'asd',
+                closeBtn: 1, //不显示关闭按钮
+                // shade: [0],
+                // fixed: false,
+                area: ['70vw', '80vh'], // 宽高
+                // offset: 'rb', //右下角弹出\
+                // offset: ['100%', '100%'],
+                shadeClose: true, // 点击遮罩层关闭弹窗
+                shade: 0.1, // 遮罩层透明度
+                // maxmin: true, //开启最大化最小化按钮
+                // time: 2000, //2秒后自动关闭
+                anim: 2,
+                content: ['http://www.baidu.com',], //iframe的url，no代表不显示滚动条
+            }
+        )
+
+    }
+    var pymParent = new pym.Parent('example-1', 'pym-f1.html', {});
+    // promise.then(function (data) {
+    //     console.log(data)
+    //     $('#example-1').children('iframe').attr('id','example')
+    //     $("#example")[0].contentWindow.document.getElementById('a').onclick=function () {
+    //         console.log('fuzi ')
+    //     }
+    // })
 
     // console.log($('#example-1').children('iframe').attr('id'))
     // var second = new pym.Parent('example-2', 'http://0.0.0.0:5200/inhoo/admin/exam/edit/5caafdad1e2926181228bf37', {});
@@ -38,9 +67,16 @@
     // //     console.log(123)
     // // })
     // setTimeout(function () {
-    //
+        // $('#example-1').children('iframe').attr('id','example')
+        // $("#example").contents().find(".aaa").click(function () {
+        //     console.log($(this).attr('bbb'))
+        // });
+        // console.log('is ok')
     // },3000)
 
+    // $("#example-1").bind('DOMNodeInserted', function(e) {
+    //     console.log('element now contains: ' + $(e.target).html());
+    // });
 </script>
 </body>
 </html>
