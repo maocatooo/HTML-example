@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            width: 100px;
+            height: 33px;
+            background-color: #ddd;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            line-height: 33px;
+        }
+        a > span{
+            display: inline-block;
+            width: 100px;
+            height: 33px;
+            line-height: 33px;
+
+        }
+        .file{
+            width: 100px;
+            height: 33px;
+            position: absolute;
+            top:0;
+            left: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+        .file-upload{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="fa">
+        <a>aaaaaaaa</a>
+        <a>aaaaaaaa</a>
+        <a class="file-upload">
+            <span>上传文件</span>
+            <input type="file" class="file">
+        </a>
+        <a>aaaaaaaa</a>
+        <a>aaaaaaaa</a>
+    </div>
+</body>
+</html>
