@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <a href="">1</a>
+    <a href="">2</a>
+    <a href="">3</a>
+</head>
+<body>
+<script>
+    let set = new Set()  // == new Set([])
+    set.add('1')
+    console.log(set.size)
+    set.has('1')
+    set.delete('1')
+    set.clear()
+    console.log(set)
+
+    let map = new Map([['1',()=>{}]])
+    console.log(map)
+    map.set('d','dd')
+    console.log(map.get('d'))
+    map.delete('d')
+    map.clear()
+    // has
+    // size
+
+</script>
+</body>
+</html>

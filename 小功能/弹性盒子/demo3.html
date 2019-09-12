@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box {
+            width: 500px;
+            height: 500px;
+            /*box-sizing: content-box;  !*正常的盒子*!*/
+            box-sizing: border-box;
+            border: 1px solid black;
+            margin:20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse;
+            /*垂直排列方式
+            column         纵向 // 会使方向反过来
+            row            横向
+            column-reverse 纵向翻过
+            row-reverse    横向翻过
+
+            */
+        }
+        .div{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            font-size: 30px;
+            line-height: 100px;
+            text-align: center;
+            color: #fff;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="div">1</div>
+    <div class="div">2</div>
+    <div class="div">3</div>
+</div>
+</body>
+</html>

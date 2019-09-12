@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Symbol 不能被 for in , for of 遍历出来
+    let symbol1 = Symbol()
+    let symbol2 = Symbol()
+    let obj = {
+
+    }
+    obj[symbol1] = '1'
+    obj[symbol2] = '2'
+    console.log(obj)
+
+</script>
+</body>
+</html>

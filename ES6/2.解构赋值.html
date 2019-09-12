@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <script>
+        let obj = {username:'ddd', age:'1'}
+        // let {username, age  }= obj
+        // console.log(username,age) //ddd 1
+        let {username, xxx  }= obj
+
+        console.log(username,xxx) //ddd undefined
+        let arr = [1,2,3,4]
+        // let [a,b,c] = arr
+        // console.log(a,b,c)// 1 2 3
+        let [a,b, ,c] = arr
+        console.log(a,b,c)// 1 2 4
+
+
+        function foo({username, age}) {
+            console.log(username, age)
+        }
+        foo(obj)
+
+    </script>
+
+
+</body>
+</html>

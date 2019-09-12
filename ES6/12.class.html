@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Person{
+        constructor(name){
+            this.name = name
+        }
+    }
+    class Child extends Person{
+        constructor(name, age) {
+            super(name);
+            this.age = age
+        }
+    }
+    let c = new Child('111', 11)
+    console.log(c)
+</script>
+</body>
+</html>

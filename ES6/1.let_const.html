@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let 声明变量 只能在同一块级作用域声明一次
+    let aaa = ''
+    // let aaa = '' // err
+    {
+        let aaa = ''
+    }
+    // 不可变
+    const person = ''
+    // person = '1'  //err
+    const obj = {
+        username:'aaa'
+    }
+    obj.username = '111' //ok
+</script>
+</body>
+</html>

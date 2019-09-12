@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <a href="">1</a>
+    <a href="">2</a>
+    <a href="">3</a>
+</head>
+<body>
+<script>
+    let a = document.getElementsByName('a')
+    // 伪数组(可遍历对象)转真数组
+    Array.from(a).forEach(function () {
+
+  })
+    let list = [1,2,3,4,5]
+    let a1 = list.find(((value, index, obj) => {
+        console.log(value,index,obj) // 1 0 Array(5)
+        if (value === 44){
+            return true
+        }
+    }))
+    console.log(a1)
+
+</script>
+</body>
+</html>

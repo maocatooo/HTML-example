@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name:'asd'
+        }
+        function foo(data,data2) {
+            console.log(this, data, data2)
+        }
+        foo.apply(obj,[333,22])
+
+        foo.call(obj,33,222)
+        // 定义this 指向
+        foo.bind(obj,33,222)()
+        setTimeout(function () {
+
+        }.bind(obj),1000)
+    </script>
+</body>
+</html>

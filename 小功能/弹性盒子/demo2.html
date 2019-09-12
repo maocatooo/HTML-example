@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box {
+            width: 500px;
+            height: 500px;
+            /*box-sizing: content-box;  !*正常的盒子*!*/
+            box-sizing: border-box;
+            border: 1px solid black;
+            margin:20px;
+            display: flex;
+            justify-content: space-around;
+            /*水平排列方式
+            justify-content
+            center       居中
+            flex-start   居左
+            flex-end     居右
+            space-between 两端对齐
+            space-around 子元素拉手对齐
+            */
+            align-items: center;
+            /*垂直排列方式
+            align-items
+            stretch      拉伸 (默认)
+            center       居中
+            flex-start   居左
+            flex-end     居右
+            */
+        }
+        .div{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            font-size: 30px;
+            line-height: 100px;
+            text-align: center;
+            color: #fff;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="div">1</div>
+    <div class="div">2</div>
+    <div class="div">3</div>
+    <div class="div">4</div>
+    <div class="div">5</div>
+</div>
+</body>
+</html>

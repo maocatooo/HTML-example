@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box {
+            width: 500px;
+            height: 500px;
+            /*box-sizing: content-box;  !*正常的盒子*!*/
+            box-sizing: border-box;
+            border: 1px solid black;
+            margin:20px;
+            display: flex;
+        }
+        .div{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            font-size: 30px;
+            line-height: 100px;
+            text-align: center;
+            color: #fff;
+            background-color: red;
+        }
+        .div1{
+            width: 200px;
+            /*flex: 1;*/
+        }
+        .div2 {
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="div div1">1</div>
+    <div class="div div2">2</div>
+</div>
+</body>
+</html>

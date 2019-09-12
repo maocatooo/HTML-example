@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const log = console.log
+        //Object.create
+        var obj1 = {username:'zs'}
+        var obj2 = Object.create(obj1, {
+            age:{
+                value:1, // 为obj2绑定属性
+                writable:false, //可否被修改
+                configurable:false, // 可否被删除
+                enumerable:false // 可否被枚举 for i in obj
+            }
+        })
+        console.log(obj2)
+        //Object.create
+        Object.defineProperties(obj1,{
+            sex:{
+                get() {
+                    return this.username
+                },
+                set(v) {
+                    this.username += v
+                }
+            }
+        })
+        obj1.sex = "1"
+        console.log(obj1.sex)
+
+        var new_obj = {
+            name:'a',
+            get nameUp(){
+                return this.name.toLocaleUpperCase()
+            },
+            set nameUp(v){
+                this.name = v
+            }
+        }
+        new_obj.nameUp = 'ddda'
+        log(new_obj.nameUp)
+    </script>
+</body>
+</html>

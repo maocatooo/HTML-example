@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <script>
+        function foo(a, ...result) {
+            console.log(a , result)
+            console.log(console.log(...result) === console.log(2,3,4))
+        }
+        foo(1,2,3,4)
+        let arr1 = [1,2,3,4,5]
+        let [a,...res] = arr1
+        console.log(a, res)
+    </script>
+
+
+</body>
+</html>

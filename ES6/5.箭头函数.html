@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <script>
+        // this 指向 function 外部
+        let foo = (data)=>{
+            console.log(this) // window
+            console.log(data)
+        }
+        foo({"asd":'a'})
+
+
+        // 箭头函数参数
+        // 1.无参数,()必要
+        let foo1 = () => console.log('11') ;
+        // 2. 一个参数 () 可以省略
+        let foo2 = a => console.log(a);
+        // 3, 多个参数 ()不可以省略
+        let foo3 = (a, b) => console.log(a, b);
+
+
+        // 箭头函数函数体
+        // 1.函数体只有一条语句或者表达式的时候, {} 可以省略 >>省略后自动返回执行的结过果
+        let foo4 = ()=> 1+2 // == let foo4 = ()=> { return 1+2 }
+        // 2.函数体有多条语句或者表达式的时候 {} 不能省略
+    </script>
+
+
+</body>
+</html>

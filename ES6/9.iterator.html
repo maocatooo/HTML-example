@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // iterator 迭代器
+    //  Array, 字符串, arguments, set容器, map容器
+    // 可以被 for of 遍历
+    for (let i of 'asdf'){
+        console.log(i)
+    }
+    // 未指定的数据结构部署iterator接口
+    let targetData = {
+        [Symbol.iterator]() {
+            let index = 0
+            return index < this.length?{value:this[index++],done:false}:{value: undefined,done: true}
+        }
+    }
+</script>
+</body>
+</html>

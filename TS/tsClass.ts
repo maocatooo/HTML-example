@@ -153,3 +153,24 @@ class Person extends Obj implements Per {
 }
 let person:Person = new Person('aaa').eat()
 console.log(person.name)
+
+
+// 泛型
+// 泛型类
+class Do<T>{
+    public a :T;
+    add(a:T): T {
+        return a
+    }
+}
+console.log(new Do<string>().add('a'))
+
+// 泛型接口
+interface Conf {
+    <T>(value:T):T
+}
+
+var conf:Conf= function <T>(vla:T):T{
+    return vla
+}
+console.log(conf<string>('1'))

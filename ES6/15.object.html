@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <a href="">1</a>
+    <a href="">2</a>
+    <a href="">3</a>
+</head>
+<body>
+<script>
+    console.log(0 == -0)
+    console.log(NaN == NaN)
+    console.log(Object.is(0, -0))
+    console.log(Object.is(NaN, NaN))
+    let obj1 = {}
+    let obj2 = {name:'333'}
+    let obj3 = {age:33}
+    Object.assign(obj1,obj2,obj3)
+    console.log(obj1)
+
+    let obj4 = {}
+    obj4.__proto__ = obj1
+    console.log(obj4)
+</script>
+</body>
+</html>

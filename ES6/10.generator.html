@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function* foo() {
+        let a = yield 'asd'
+        yield 'dd'
+    }
+    let f = foo()
+    console.log(f.next())
+    console.log(f.next())
+    console.log(f.next())
+    for(let i of foo()){
+        console.log(i)
+    }
+    function* foo1() {
+        let a = yield 'asd'
+        console.log(a)
+        yield 'dd'
+    }
+    let f1 = foo1()
+    console.log(f1.next())
+    console.log(f1.next('ddddddd'))
+    console.log(f1.next())
+
+
+    let targetData = {
+        name:'1',
+        age:1,
+        [Symbol.iterator]:function*() {
+            yield 1
+            yield 2
+            yield 3
+        }
+    }
+    for(let i of targetData){
+        console.log(i)
+    }
+</script>
+</body>
+</html>

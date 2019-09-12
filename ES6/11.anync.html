@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // async function foo1() {
+    //     return new Promise((resolve, reject)=>{
+    //         setTimeout(resolve,2000)
+    //     })
+    // }
+    // async function test(){
+    //     console.log('start', new Date().toLocaleTimeString())
+    //     await foo1()
+    //     console.log('end', new Date().toLocaleTimeString())
+    // }
+    // test()
+    async function foo() {
+        // return Promise.resolve('im ok')
+        return Promise.reject('im ok')
+    }
+    async function test() {
+        console.log(await foo())
+        console.log(await foo()) //reject下此处不会据需执行
+    }
+    test()
+</script>
+</body>
+</html>
